@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root version="1.0" xmlns="http://www.unionpaysoft.com/schema/config-mapping-1.0.xsd">
+	<config name="com.hero.commons.test.model.ChannelService">
+		<config name="testBank">
+			<property name="com.hero.commons.test.model.ChannelService"
+				type="object" value="com.hero.commons.test.model.BankChannelService" />
+		</config>
+	</config>
+
+</root>

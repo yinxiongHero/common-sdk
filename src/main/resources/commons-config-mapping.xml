@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+        "http://castor.org/mapping.dtd">
+<mapping>
+    <description>Description of config mapping</description>
+
+    <class name="com.hero.commons.tool.xml.Root">
+        <map-to xml="root"/>
+        <field name="version" type="java.lang.String">
+            <bind-xml name="version" node="attribute"/>
+        </field>
+        <field name="xmlns" type="java.lang.String">
+            <bind-xml name="xmlns" node="attribute"/>
+        </field>
+        <field name="import" type="com.hero.commons.tool.xml.Import" collection="array">
+            <bind-xml name="import" node="element"/>
+        </field>
+        <field name="config" type="com.hero.commons.tool.xml.Config" collection="array">
+            <bind-xml name="config" node="element" />
+        </field>
+    </class>
+
+    <class name="com.hero.commons.tool.xml.Config">
+        <map-to xml="config" />
+        <field name="name" type="java.lang.String" required="true">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="type" type="java.lang.String">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="config" type="com.hero.commons.tool.xml.Config" collection="array">
+            <bind-xml name="config" node="element"/>
+        </field>
+        <field name="bean" type="com.hero.commons.tool.xml.Bean" collection="array">
+            <bind-xml name="bean" node="element"/>
+        </field>
+        <field name="property" type="com.hero.commons.tool.xml.Property" collection="array">
+            <bind-xml name="property" node="element"/>
+        </field>
+    </class>
+
+    <class name="com.hero.commons.tool.xml.Import">
+        <map-to xml="import" />
+        <field name="ref" type="java.lang.String" required="true">
+            <bind-xml name="ref" node="attribute"/>
+        </field>
+    </class>
+
+    <class name="com.hero.commons.tool.xml.Bean">
+        <map-to xml="bean" />
+        <field name="name" type="java.lang.String" required="true">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="implClass" type="java.lang.String">
+            <bind-xml name="implClass" node="attribute"/>
+        </field>
+        <field name="type" type="java.lang.String">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="bean" type="com.hero.commons.tool.xml.Bean" collection="array">
+            <bind-xml name="bean" node="element"/>
+        </field>
+        <field name="property" type="com.hero.commons.tool.xml.Property" collection="array">
+            <bind-xml name="property" node="element"/>
+        </field>
+    </class>
+
+    <class name="com.hero.commons.tool.xml.Property">
+        <map-to xml="property" />
+        <field name="name" type="java.lang.String" required="true">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="type" type="java.lang.String">
+            <bind-xml name="type" node="attribute"/>
+        </field>
+        <field name="value" type="java.lang.String" required="true">
+            <bind-xml name="value" node="attribute"/>
+        </field>
+    </class>
+
+</mapping>
