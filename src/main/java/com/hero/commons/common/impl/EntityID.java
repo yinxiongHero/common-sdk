@@ -20,7 +20,7 @@ public class EntityID extends EnumID<EntityID>{
 	}
 	
 	/**
-	 * 此处使用了类似装饰器模式   每一个父类维护一个状态值
+	 * 此处使用了类似装饰器模式   EntityID 维护desc描述,EnumID维护id，父类中有一个容易维护着所有的实例
 	 * @param id
 	 * @param desc  
 	 * @param isInitCurClass 是否初始化自身

@@ -9,28 +9,32 @@ import java.sql.SQLException;
  */
 public class DBException extends BaseException {
 
-    /**
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -1318044864920664553L;
 
 	public DBException() {
-        super();
-    }
+		super();
+	}
 
-    public DBException(String errCode, String message) {
-        super(errCode, message);
-    }
+	public DBException(String errCode, String message) {
+		super(errCode, message);
+	}
 
-    public DBException(String errCode, String message, Throwable cause) {
-        super(errCode, message, cause);
-    }
+	public DBException(String message) {
+		super(message);
+	}
 
-    public DBException(Throwable cause) {
-        super(cause);
-    }
+	public DBException(String errCode, String message, Throwable cause) {
+		super(errCode, message, cause);
+	}
 
-    public DBException(SQLException e) {
-        this(String.valueOf(e.getErrorCode()), e.getMessage(), e);
-    }
+	public DBException(Throwable cause) {
+		super(cause);
+	}
+
+	public DBException(SQLException e) {
+		this(String.valueOf(e.getErrorCode()), e.getMessage(), e);
+	}
 }

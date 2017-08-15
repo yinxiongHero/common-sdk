@@ -20,6 +20,10 @@ public class BaseException extends Exception {
         super(errCode + " : " + message);
         this.errCode = errCode;
     }
+    
+    public BaseException(String message){
+    	super(message);
+    }
 
     public BaseException(String errCode, String message, Throwable cause) {
         super(errCode + " : " + message, cause);
